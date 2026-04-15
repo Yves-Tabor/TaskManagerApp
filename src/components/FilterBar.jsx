@@ -1,11 +1,12 @@
 import React from 'react'
 
-function FilterBar() {
+function FilterBar({setFilter}) {
+    
   return (
     <div className="filter-bar">
-      <button>all</button>
-      <button>active</button>
-      <button>completed</button>
+      <button onClick={() => setFilter('all')}>all</button>
+      <button onClick={() => setFilter('active')}>active</button>
+      <button onClick={() => setFilter('completed')}>completed</button>
     </div>
   )
 }

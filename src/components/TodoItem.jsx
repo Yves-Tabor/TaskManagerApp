@@ -2,11 +2,11 @@ import React from 'react'
 
 function TodoItem({todo, onToggle, onDelete}) {
   return (
-    <li className="todo-item">
-      <input type="checkbox" checked={todo.completed}/>
+    <span className={`todo-item ${todo.completed ? 'completed' : ''}`}>
+      <input type="checkbox" checked={todo.completed} onChange={() => onToggle(todo.id)}/>
       <span className="todo-text">{todo.text}</span>
-      <button className="delete-btn">Delete</button>
-    </li>
+      <button className="delete-btn" onClick={() => onDelete(todo.id)}>Delete</button>
+    </span>
   )
 }
 

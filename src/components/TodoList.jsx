@@ -1,12 +1,15 @@
 import React from 'react'
 import TodoItem from './TodoItem'
+import FilterBar from './FilterBar'
 
-function TodoList({todos}) {
+function TodoList({todos, onToggle, onDelete, onClick}) {
   return (
     <div className="todo-list">
       <ul>
         {todos.map((todo) => (
-          <TodoItem key={todo.id} todo={todo} />
+          <li key={todo.id}>
+            <TodoItem todo={todo} onToggle={onToggle} onDelete={onDelete} />
+          </li>
         ))}
       </ul>
     </div>
@@ -14,3 +17,4 @@ function TodoList({todos}) {
 }
 
 export default TodoList
+

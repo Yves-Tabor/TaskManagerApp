@@ -150,10 +150,8 @@ h1 {
 }
 
 .todo-item:hover {
-  background: #f7fafc;
-  margin: 0 -1.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  background: silver;
+  padding: 1rem;
 }
 
 .todo-item:last-child {
@@ -171,7 +169,7 @@ h1 {
 .todo-item .todo-text {
   flex: 1;
   font-size: 1rem;
-  color: #2d3748;
+  color: black;
   line-height: 1.5;
   transition: all 0.3s ease;
 }
